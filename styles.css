@@ -137,7 +137,7 @@ ul>li {
    font-weight: 500;
 }
 
-ul>li:active {
+ul>li:hover {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
