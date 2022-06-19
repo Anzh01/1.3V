@@ -137,7 +137,8 @@ ul>li {
    font-weight: 500;
 }
 
-ul>li:hover {
+ul>li:hover,
+ul>li:focus {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
@@ -344,6 +345,10 @@ ul>li:hover {
 
     .main__text_first-paragraph {
         margin-top: 32px;
+    }
+
+    .main__text_2paragraph {
+        display: none;
     }
 
     .main__text_3paragraph {
