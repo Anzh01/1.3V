@@ -1,9 +1,3 @@
-/* @font-face {
-    font-family: "TT Lakes";
-    src: url(fonts/TTLakes-Regular.ttf),
-         url(fonts/TTLakes-Bold.ttf);
-} */
-
 @font-face {
     font-family: 'TT Lakes';
     src: local('TT Lakes'), url(fonts/TTLakes-Regular.ttf);
@@ -25,6 +19,14 @@
     font-weight: 700;
     font-style: bold;
     font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
 }
 
 body {
@@ -107,11 +109,6 @@ body {
     position: absolute;
 }
 
-/* .main {
-    background: linear-gradient(to left, #F8F8F8);
-    z-index: 2;
-} */
-
 .main__nav {
     height: 40px;
     margin-top: 24px;
@@ -140,7 +137,7 @@ ul>li {
    font-weight: 500;
 }
 
-ul>li:hover {
+ul>li:active {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
