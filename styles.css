@@ -141,6 +141,7 @@ ul>li:hover {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
+    padding: 6px 14px;
 }
 
 .main__text {
