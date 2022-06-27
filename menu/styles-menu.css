@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(fonts/TTLakes-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(fonts/TTLakes-DemiBold.ttf);
+    font-weight: 500;
+    font-style: bolder;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(fonts/TTLakes-Bold.ttf);
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    position: fixed;
+    left: 0;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 320px;
+    height: 100vh;
+    padding: 23px 24px;
+    box-sizing: border-box;
+
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.side-menu__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.side-menu__icons-left {
+    display: flex;
+    flex-direction: row;
+    gap: 16px; 
+    align-items: center;
+}
+
+.side-menu__items {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.side-menu__items li {
+    display: block;
+    margin-bottom: 32px;
+}
+
+.side-menu__items li a {
+    position: relative;
+
+    text-decoration: none;
+    font-weight: 500;
+    color: #1B1C21;
+}
+
+.side-menu__items li a:hover,
+.side-menu__items li a:active {
+    color: #7E7E82;
+    transform: scale(100%);
+    transition: 1s;
+}
+
+.side-menu__items li a::before {
+    position: absolute;
+
+    content: "";
+    width: 4px;
+    height: 32px;
+    top: -7px;
+    left: -24px;
+    background-color: #41F6D7;
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+}
+
+.side-menu__items li a:hover::before {
+    opacity: 1;
+    transition: 1s;
+}
+
+.side-menu__icons_bottom {
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.side-menu__email {
+    color: #1B1C21;
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.side-menu__tel {
+    font-size: 24px;
+    line-height: 16px;
+    letter-spacing: -0.6px;
+    font-weight: bold;
+    white-space: pre;
+    margin-bottom: 40px;
+}
+
+.side-menu__lang_options {
+    list-style: none;
+
+    display: flex;
+    padding: 0;
+    gap: 7px;
+}
+
+.side-menu__lang_options li a {
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.side-menu__lang_options li a:hover {
+    color: #7E7E82;
+    transform: scale(100%);
+    transition: 1s;
+}
