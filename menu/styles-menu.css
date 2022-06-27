@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: local('TT Lakes'), url(fonts/TTLakes-Regular.ttf);
+    src: local('TT Lakes'), url(../fonts/TTLakes-Regular.ttf);
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,14 +8,14 @@
 
 @font-face {
     font-family: 'TT Lakes';
-    src: local('TT Lakes'), url(fonts/TTLakes-DemiBold.ttf);
+    src: local('TT Lakes'), url(../fonts/TTLakes-DemiBold.ttf);
     font-weight: 500;
     font-style: bolder;
     font-display: swap;
 }
 @font-face {
     font-family: 'TT Lakes';
-    src: local('TT Lakes'), url(fonts/TTLakes-Bold.ttf);
+    src: local('TT Lakes'), url(../fonts/TTLakes-Bold.ttf);
     font-weight: 700;
     font-style: bold;
     font-display: swap;
@@ -28,8 +28,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    position: fixed;
-    left: 0;
+    
 }
 
 .side-menu {
@@ -41,6 +40,7 @@ body {
     height: 100vh;
     padding: 23px 24px;
     box-sizing: border-box;
+    
 
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
