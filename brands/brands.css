@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(../fonts/TTLakes-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(../fonts/TTLakes-Medium.ttf);
+    font-weight: 500;
+    font-style: bolder;
+    font-display: swap;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    max-width: 1120px;
+    margin: auto;
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+}
+
+.services {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 0 16px 0 16px;
+}
+
+.services_title {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7E7E82;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    box-shadow: inset 0 1px 1px 0  #D9FFF5,
+                -16px 0 0 0 #ffffff;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.swiper-container::after {
+    content: ' ';
+    height: 84px;
+    width: 24px;
+    position: fixed;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    z-index: 10;
+    right: 0px;
+    top: 90px;
+}
+
+.swiper-slide {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    width: 240px;
+}
+
+.swiper-slide a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 0 16px 0 16px;
+}
+
+.swiper-slide_arrow {
+    height: 36px;
+    width: 36px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.swiper-slide_arrow::after {
+    content: "";
+    border-right: 2px solid #FF3E79;
+    border-top: 2px solid #FF3E79;
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: rotate(45deg);
+}
+
+.swiper-pagination {
+    position: relative;
+    top: 16px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ddd;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+@media (min-width: 768px) {
+    .services {
+        padding: 0 24px 0 24px;
+    }
+
+    .services_title {
+        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+        box-shadow: 24px 0 0 0 #FFFFFF,
+                    inset 0 1px 1px 0  #D9FFF5;
+        height: 56px;
+    }
+ 
+    
+    .swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 16px;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0) !important;
+
+        box-sizing: border-box;
+        transition-property: height;
+        transition-duration: 2s !important;
+    }
+
+    
+
+    .swiper-wrapper_close {
+        height: 180px;
+        
+        transition-property: height;
+        transition-duration: 2s;
+    }
+
+    .swiper-wrapper_open {
+        height: 370px;
+        
+        transition-property: height;
+        transition-duration: 2s;
+    }
+
+    .swiper-slide {
+        width: 224px;
+        height: auto;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+    .services_button-read-more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 134px;
+
+        color: #1B1C21;
+        line-height: 24px;
+        word-spacing: -0.2px;
+        font-size: 16px;
+        font-family: 'TT Lakes';
+        font-weight: 500;
+    }
+
+    .services_button-read-more-open {
+        width: 90px;
+    }
+
+    .services_button-icon-open {
+        transform: rotate(180deg);
+    }
+}
+
+    @media (min-width: 1020px) {
+        .swiper-wrapper_open {
+            height: 270px;
+        }
+    }
+
+    @media (min-width: 1120px) {
+        .services {
+            padding: 0 32px 0 32px;
+        }
+
+        .swiper-slide {
+            width: 240px;
+        }
+
+        .services_title {
+            background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+            box-shadow: 1000px 0 0 0 #FFFFFF,
+                        inset 0 1px 1px 0  #D9FFF5;
+            
+        }
+
+        
+    }
