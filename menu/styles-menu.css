@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'TT Lakes';
-    src: local('TT Lakes'), url(../fonts/TTLakes-DemiBold.ttf);
+    src: local('TT Lakes'), url(../fonts/TTLakes-Medium.ttf);
     font-weight: 500;
     font-style: bolder;
     font-display: swap;
