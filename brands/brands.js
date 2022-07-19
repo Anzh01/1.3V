@@ -1,23 +1,3 @@
-var swiper = new Swiper('.swiper-container', {
-    pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    },
-    slidesPerView: 'auto',
-    direction: 'horizontal',
-    spaceBetween: 16,
-    centeredSlides: true,
-    breakpoints: {
-        768: {
-            enabled: false,
-            onAny() {
-                swiper.destroy(true, true);
-            },
-            spaceBetween: 0,
-        }},
-    observer: true,
-});
-
 const brandsBlock = document.querySelector('.swiper-wrapper');
 const button = document.querySelector('.services__button-more');
 
@@ -35,12 +15,38 @@ button.addEventListener('click', function () {
     }
 })
 
-// var windowSize = window.innerWidth;
-// function removeStyle () {
-//     if (windowSize >= 768) {
-//         brandsBlock.style = null;
-//     }
-// }
-// windowSize.addEventListener('resize', function () {
-//     removeStyle()
-// });
+
+
+var swiper = Swiper;
+var init = false;
+var pagination = document.querySelector('.swiper-pagination');
+
+function swiperMode() {
+    if(window.innerWidth < 768) {
+        if (!init) {
+            init = true;
+            swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    },
+                slidesPerView: 'auto',
+                direction: 'horizontal',
+                spaceBetween: 16,
+                centeredSlides: true,
+                observer: true,
+            });
+            pagination.classList.remove('hidden');
+        }
+
+    }
+
+    else if (init) {
+        init = false;
+        swiper.destroy();
+        pagination.classList.add('hidden');
+    }
+}
+
+swiperMode();
+window.addEventListener('resize', swiperMode);
