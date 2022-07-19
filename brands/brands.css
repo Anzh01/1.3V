@@ -18,8 +18,20 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding-inline-start: 0;
+    margin-block: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+h1 {
+    margin-block: 0;
+}
+
 body {
-    margin: 0;
     max-width: 1120px;
     margin: auto;
     background-color: #F8F8F8;
@@ -27,7 +39,6 @@ body {
 }
 
 .services {
-    min-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +47,7 @@ body {
     padding: 0 16px 0 16px;
 }
 
-.services_title {
+.services__title {
     font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -56,7 +67,6 @@ body {
 .swiper-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
 .swiper-container::after {
@@ -66,7 +76,7 @@ body {
     position: fixed;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     z-index: 10;
-    right: 0px;
+    right: -2px;
     top: 90px;
 }
 
@@ -75,18 +85,19 @@ body {
     border: 1px solid #eaeaea;
     border-radius: 6px;
     width: 240px;
+    box-sizing: border-box;
 }
 
-.swiper-slide a {
+.swiper-slide__link {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 72px;
-    padding: 0 16px 0 16px;
+    padding: 0 15px 0 15px;
 }
 
-.swiper-slide_arrow {
+.swiper-slide__arrow {
     height: 36px;
     width: 36px;
     border: 2px solid #FF3E79;
@@ -95,7 +106,7 @@ body {
     position: relative;
 }
 
-.swiper-slide_arrow::after {
+.swiper-slide__arrow::after {
     content: "";
     border-right: 2px solid #FF3E79;
     border-top: 2px solid #FF3E79;
@@ -127,7 +138,7 @@ body {
         padding: 0 24px 0 24px;
     }
 
-    .services_title {
+    .services__title {
         background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
         box-shadow: 24px 0 0 0 #FFFFFF,
                     inset 0 1px 1px 0  #D9FFF5;
@@ -144,24 +155,15 @@ body {
         transform: translate3d(0, 0, 0) !important;
 
         box-sizing: border-box;
-        transition-property: height;
-        transition-duration: 2s !important;
+        transition: height 0.5s !important; 
     }
-
-    
 
     .swiper-wrapper_close {
         height: 180px;
-        
-        transition-property: height;
-        transition-duration: 2s;
     }
 
     .swiper-wrapper_open {
         height: 370px;
-        
-        transition-property: height;
-        transition-duration: 2s;
     }
 
     .swiper-slide {
@@ -178,7 +180,7 @@ body {
         cursor: pointer;
       }
 
-    .services_button-read-more {
+    .services__button-more {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -193,36 +195,50 @@ body {
         font-weight: 500;
     }
 
-    .services_button-read-more-open {
+    .services__button-more::before {
+        content: '';
+        background-image: url(../img/icon.svg);
+        height: 10px;
+        width: 8px;
+    }
+
+    .services__button-more_open {
         width: 90px;
     }
 
-    .services_button-icon-open {
+    .services__button-more_open::before {
+        content: '';
+        background-image: url(../img/icon.svg);
+        height: 10px;
+        width: 8px;
         transform: rotate(180deg);
     }
 }
 
-    @media (min-width: 1020px) {
-        .swiper-wrapper_open {
-            height: 270px;
-        }
+@media (min-width: 1020px) {
+    .swiper-wrapper_open {
+        height: 270px;
     }
 
-    @media (min-width: 1120px) {
-        .services {
-            padding: 0 32px 0 32px;
-        }
+    .swiper-wrapper {
+        column-gap: 32px;
+    }
+}
 
-        .swiper-slide {
-            width: 240px;
-        }
 
-        .services_title {
-            background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-            box-shadow: 1000px 0 0 0 #FFFFFF,
-                        inset 0 1px 1px 0  #D9FFF5;
-            
-        }
+@media (min-width: 1120px) {
+    .services {
+        padding: 0 32px 0 32px;
+    }
 
+    .swiper-slide {
+        width: 240px;
+    }
+
+    .services__title {
+        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+        box-shadow: 1000px 0 0 0 #FFFFFF,
+                    inset 0 1px 1px 0  #D9FFF5;
         
     }
+}
